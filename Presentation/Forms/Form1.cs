@@ -6,13 +6,12 @@ namespace TimeTracker
     public partial class Form1 : Form
     {
         private readonly TimerComponent _timer;
-        private readonly ProjectComponent _projectComponent;
+        private readonly NewProjectComponent _projectComponent;
 
         public Form1()
         {
             InitializeComponent();
             _timer = new TimerComponent(TimeDisplay);
-            _projectComponent = new ProjectComponent(ProjectName, TaskName, TaskDescription, TaskStatus, ProjectListBox);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,7 +32,6 @@ namespace TimeTracker
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            _projectComponent.CreateProject();
         }
     }
 }

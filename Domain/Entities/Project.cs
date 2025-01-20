@@ -3,38 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimeTracker.Domain.Common.Enums;
 
 namespace TimeTracker.Domain.Entities
 {
     internal class Project
     {
-        // Field
         private readonly List<Task> _tasks;
 
-        // Property
-        public int Id { get; private set; }
-        public string Name { get; private set; }
-        public Decimal TotalTime { get; private set; }
-    
-        // Constructor
-        public Project(int id, string name, List<Task> tasks, Decimal totalTime)
+        public Guid Id { get; private set; }
+        public string Name { get; private set; } 
+        public string Description { get; private set; }
+        public int RatePerHour { get; private set; }
+        public TimeSpan TotalTime { get; private set; }
+        public double TotalCost => RatePerHour * TotalTime.TotalHours;
+        public Status ProjectStatus { get; private set; }
+
+        public Project(string name, string description, int ratePerHour)
         {
-            Id = id;
+            Id = Guid.NewGuid();
+            _tasks = new List<Task>();
             Name = name;
-            _tasks = tasks ?? new List<Task>();
-            TotalTime = totalTime;
+            Description = description;
+            RatePerHour = ratePerHour;
+            TotalTime = TimeSpan.Zero;
+            ProjectStatus = Status.Planned;
         }
 
-        // Method
         public void AddTask(Task task)
         {
             _tasks.Add(task);
-        }
-
-        // Override ToString to display the project name or other relevant information
-        public override string ToString()
-        {
-            return $"{Name} - Total Time: {TotalTime:C}"; // Example format
+            TotalTime += task.LoggedTime;
         }
     }
 }

@@ -1,6 +1,10 @@
+using Microsoft.Extensions.DependencyInjection;
 using TimeTracker;
+using TimeTracker.Application.Interfaces.UseCases;
+using TimeTracker.Presentation.Components;
+using TimeTracker.Presentation.Forms;
 
-    internal static class Program
+internal static class Program
     {
         /// <summary>
         ///  The main entry point for the application.
@@ -8,9 +12,7 @@ using TimeTracker;
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new StartForm());
         }
     }
