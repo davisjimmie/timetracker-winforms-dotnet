@@ -7,6 +7,8 @@ using TimeTracker.Application.DTOs;
 using TimeTracker.Application.UseCases;
 using TimeTracker.Application.Interfaces.UseCases;
 using TimeTracker.Application.Mappers;
+using TimeTracker.Domain.Entities;
+using System.Windows.Forms;
 namespace TimeTracker.Presentation.Components
 {
     internal class NewProjectComponent
@@ -16,17 +18,17 @@ namespace TimeTracker.Presentation.Components
         private readonly TextBox _projectRate;
         private readonly IAddProjectUseCase _addProjectUseCase;
 
-        public NewProjectComponent(TextBox projectName, TextBox projectDescription, TextBox projectRate, IAddProjectUseCase addProjectUseCase)
+        public NewProjectComponent(TextBox projectName, TextBox projectDescription, TextBox projectRate, IAddProjectUseCase usecase)
         {
             _projectName = projectName;
             _projectDescription = projectDescription;
             _projectRate = projectRate;
-            _addProjectUseCase = addProjectUseCase;
+            _addProjectUseCase = usecase;
         }
-
 
         public void AddProject()
         {
+            MessageBox.Show("ok");
 
             ProjectDTO projectDTO = new ProjectDTO
             {
@@ -34,6 +36,16 @@ namespace TimeTracker.Presentation.Components
                 Description = _projectDescription.Text,
                 RatePerHour = int.Parse(_projectRate.Text)
             };
+
+
+            Project project = new Project(
+                projectDTO.Name,
+                projectDTO.Description,
+                projectDTO.RatePerHour
+                );
+            //temp code
+            _projectDescription.Text = string.Empty;
+            _projectDescription.Text = project.ToString();
 
             _addProjectUseCase.Execute(projectDTO);
         }

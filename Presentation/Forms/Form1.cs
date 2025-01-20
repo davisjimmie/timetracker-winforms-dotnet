@@ -6,7 +6,6 @@ namespace TimeTracker
     public partial class Form1 : Form
     {
         private readonly TimerComponent _timer;
-        private readonly NewProjectComponent _projectComponent;
 
         public Form1()
         {

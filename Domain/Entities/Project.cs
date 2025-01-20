@@ -12,7 +12,7 @@ namespace TimeTracker.Domain.Entities
         private readonly List<Task> _tasks;
 
         public Guid Id { get; private set; }
-        public string Name { get; private set; } 
+        public string Name { get; private set; }
         public string Description { get; private set; }
         public int RatePerHour { get; private set; }
         public TimeSpan TotalTime { get; private set; }
@@ -34,6 +34,12 @@ namespace TimeTracker.Domain.Entities
         {
             _tasks.Add(task);
             TotalTime += task.LoggedTime;
+        }
+
+        //temp
+        public override string ToString()
+        {
+            return $"Name: {Name}\nDescription: {Description}\nRate Per Hour: {RatePerHour}";
         }
     }
 }

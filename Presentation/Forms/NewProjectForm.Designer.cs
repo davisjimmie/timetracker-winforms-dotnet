@@ -68,7 +68,6 @@
             label1.Size = new Size(67, 28);
             label1.TabIndex = 4;
             label1.Text = "Name";
-            label1.Click += label1_Click_1;
             // 
             // label2
             // 
@@ -89,7 +88,6 @@
             label3.Size = new Size(54, 28);
             label3.TabIndex = 7;
             label3.Text = "Rate";
-            label3.Click += label3_Click;
             // 
             // ProjectRateTextBox
             // 
@@ -100,7 +98,6 @@
             ProjectRateTextBox.PlaceholderText = "Hourly Rate";
             ProjectRateTextBox.Size = new Size(205, 27);
             ProjectRateTextBox.TabIndex = 6;
-            ProjectRateTextBox.TextChanged += textBox3_TextChanged;
             // 
             // AddProjectButton
             // 
@@ -113,6 +110,7 @@
             AddProjectButton.TabIndex = 9;
             AddProjectButton.Text = " Add Project ➡️ ";
             AddProjectButton.UseVisualStyleBackColor = false;
+            AddProjectButton.Click += AddProjectButton_Click;
             // 
             // BackButton
             // 
