@@ -9,6 +9,7 @@ using TimeTracker.Application.Interfaces.UseCases;
 using TimeTracker.Application.Mappers;
 using TimeTracker.Domain.Entities;
 using System.Windows.Forms;
+
 namespace TimeTracker.Presentation.Components
 {
     internal class NewProjectComponent

@@ -12,9 +12,12 @@ namespace TimeTracker.Presentation.Forms
 {
     public partial class StartForm : Form
     {
+        private readonly NewProjectForm _newProjectForm;
+
         public StartForm()
         {
             InitializeComponent();
+            _newProjectForm = new NewProjectForm();
         }
 
         private void StartScreen_Load(object sender, EventArgs e)
@@ -24,17 +27,20 @@ namespace TimeTracker.Presentation.Forms
 
         private void NewProjectButton_Click(object sender, EventArgs e)
         {
-            NewProjectForm newProjectForm = new NewProjectForm();
-
-
-            newProjectForm.Show();
+            _newProjectForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Show Project List");
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
