@@ -31,7 +31,7 @@
             StartFormTLP = new TableLayoutPanel();
             label2 = new Label();
             panel1 = new Panel();
-            button2 = new Button();
+            LoadProjectButton = new Button();
             NewProjectButton = new Button();
             label1 = new Label();
             StartFormTLP.SuspendLayout();
@@ -75,26 +75,27 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(LoadProjectButton);
             panel1.Controls.Add(NewProjectButton);
             panel1.Location = new Point(153, 246);
             panel1.Name = "panel1";
             panel1.Size = new Size(450, 62);
             panel1.TabIndex = 10;
             // 
-            // button2
+            // LoadProjectButton
             // 
-            button2.Anchor = AnchorStyles.None;
-            button2.AutoSize = true;
-            button2.BackColor = Color.RosyBrown;
-            button2.FlatStyle = FlatStyle.System;
-            button2.Font = new Font("Calibri", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(235, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(158, 42);
-            button2.TabIndex = 5;
-            button2.Text = " Load Project 🔃";
-            button2.UseVisualStyleBackColor = false;
+            LoadProjectButton.Anchor = AnchorStyles.None;
+            LoadProjectButton.AutoSize = true;
+            LoadProjectButton.BackColor = Color.RosyBrown;
+            LoadProjectButton.FlatStyle = FlatStyle.System;
+            LoadProjectButton.Font = new Font("Calibri", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            LoadProjectButton.Location = new Point(235, 12);
+            LoadProjectButton.Name = "LoadProjectButton";
+            LoadProjectButton.Size = new Size(158, 42);
+            LoadProjectButton.TabIndex = 5;
+            LoadProjectButton.Text = " Load Project 🔃";
+            LoadProjectButton.UseVisualStyleBackColor = false;
+            LoadProjectButton.Click += LoadProjectButton_Click;
             // 
             // NewProjectButton
             // 
@@ -154,7 +155,7 @@
         private Label label1;
         private Label label2;
         private Panel panel1;
-        private Button button2;
+        private Button LoadProjectButton;
         private Button NewProjectButton;
     }
 }

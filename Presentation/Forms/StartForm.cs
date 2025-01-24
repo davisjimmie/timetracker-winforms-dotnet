@@ -30,7 +30,7 @@ namespace TimeTracker.Presentation.Forms
             _newProjectForm.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void LoadProjectButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Show Project List");
         }
