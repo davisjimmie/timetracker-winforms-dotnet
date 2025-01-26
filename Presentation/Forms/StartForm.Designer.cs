@@ -40,6 +40,9 @@
             // 
             // StartFormTLP
             // 
+            StartFormTLP.Anchor = AnchorStyles.None;
+            StartFormTLP.AutoSize = true;
+            StartFormTLP.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             StartFormTLP.ColumnCount = 3;
             StartFormTLP.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 19.9890785F));
             StartFormTLP.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60.48607F));
@@ -56,7 +59,7 @@
             StartFormTLP.RowStyles.Add(new RowStyle(SizeType.Percent, 7.280514F));
             StartFormTLP.RowStyles.Add(new RowStyle(SizeType.Percent, 14.7751608F));
             StartFormTLP.RowStyles.Add(new RowStyle(SizeType.Percent, 33.19058F));
-            StartFormTLP.Size = new Size(754, 467);
+            StartFormTLP.Size = new Size(754, 463);
             StartFormTLP.TabIndex = 5;
             StartFormTLP.Paint += tableLayoutPanel1_Paint;
             // 
@@ -67,7 +70,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Calibri", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.DimGray;
-            label2.Location = new Point(210, 214);
+            label2.Location = new Point(210, 212);
             label2.Name = "label2";
             label2.Size = new Size(335, 24);
             label2.TabIndex = 7;
@@ -77,9 +80,9 @@
             // 
             panel1.Controls.Add(LoadProjectButton);
             panel1.Controls.Add(NewProjectButton);
-            panel1.Location = new Point(153, 246);
+            panel1.Location = new Point(153, 244);
             panel1.Name = "panel1";
-            panel1.Size = new Size(450, 62);
+            panel1.Size = new Size(450, 61);
             panel1.TabIndex = 10;
             // 
             // LoadProjectButton
@@ -89,7 +92,7 @@
             LoadProjectButton.BackColor = Color.RosyBrown;
             LoadProjectButton.FlatStyle = FlatStyle.System;
             LoadProjectButton.Font = new Font("Calibri", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            LoadProjectButton.Location = new Point(235, 12);
+            LoadProjectButton.Location = new Point(235, 11);
             LoadProjectButton.Name = "LoadProjectButton";
             LoadProjectButton.Size = new Size(158, 42);
             LoadProjectButton.TabIndex = 5;
@@ -104,7 +107,7 @@
             NewProjectButton.BackColor = Color.RosyBrown;
             NewProjectButton.FlatStyle = FlatStyle.System;
             NewProjectButton.Font = new Font("Calibri", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            NewProjectButton.Location = new Point(54, 12);
+            NewProjectButton.Location = new Point(54, 11);
             NewProjectButton.Name = "NewProjectButton";
             NewProjectButton.Size = new Size(155, 42);
             NewProjectButton.TabIndex = 8;
@@ -119,7 +122,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Calibri", 45F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(207, 135);
+            label1.Location = new Point(207, 133);
             label1.Name = "label1";
             label1.Size = new Size(342, 73);
             label1.TabIndex = 9;
@@ -142,6 +145,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         private void NewProjectButton_Click1(object sender, EventArgs e)
