@@ -13,6 +13,6 @@ internal static class Program
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new StartForm());
+            Application.Run(new MainForm());
         }
     }

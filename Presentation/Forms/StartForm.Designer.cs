@@ -59,7 +59,7 @@
             StartFormTLP.RowStyles.Add(new RowStyle(SizeType.Percent, 7.280514F));
             StartFormTLP.RowStyles.Add(new RowStyle(SizeType.Percent, 14.7751608F));
             StartFormTLP.RowStyles.Add(new RowStyle(SizeType.Percent, 33.19058F));
-            StartFormTLP.Size = new Size(754, 463);
+            StartFormTLP.Size = new Size(754, 450);
             StartFormTLP.TabIndex = 5;
             StartFormTLP.Paint += tableLayoutPanel1_Paint;
             // 
@@ -70,7 +70,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Calibri", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.DimGray;
-            label2.Location = new Point(210, 212);
+            label2.Location = new Point(210, 206);
             label2.Name = "label2";
             label2.Size = new Size(335, 24);
             label2.TabIndex = 7;
@@ -80,9 +80,9 @@
             // 
             panel1.Controls.Add(LoadProjectButton);
             panel1.Controls.Add(NewProjectButton);
-            panel1.Location = new Point(153, 244);
+            panel1.Location = new Point(153, 237);
             panel1.Name = "panel1";
-            panel1.Size = new Size(450, 61);
+            panel1.Size = new Size(450, 60);
             panel1.TabIndex = 10;
             // 
             // LoadProjectButton
@@ -122,11 +122,12 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Calibri", 45F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(207, 133);
+            label1.Location = new Point(207, 128);
             label1.Name = "label1";
             label1.Size = new Size(342, 73);
             label1.TabIndex = 9;
             label1.Text = "Time Tracker";
+            label1.Click += label1_Click_1;
             // 
             // StartForm
             // 

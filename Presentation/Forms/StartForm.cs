@@ -44,5 +44,10 @@ namespace TimeTracker.Presentation.Forms
         {
 
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
