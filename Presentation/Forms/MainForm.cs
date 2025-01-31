@@ -10,19 +10,21 @@ using System.Windows.Forms;
 
 namespace TimeTracker
 {
-    public partial class HomeScreenUserControl : UserControl
+    public partial class MainForm : Form
     {
-        public HomeScreenUserControl()
+        public MainForm()
         {
             InitializeComponent();
+            LoadStartControl();
         }
 
-        private void StartFormTLP_Paint(object sender, PaintEventArgs e)
+        private void LoadStartControl()
         {
-
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(new StartControl());
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
         }

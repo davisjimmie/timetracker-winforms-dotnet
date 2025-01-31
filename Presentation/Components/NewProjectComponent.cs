@@ -19,12 +19,12 @@ namespace TimeTracker.Presentation.Components
         private readonly TextBox _projectRate;
         private readonly IAddProjectUseCase _addProjectUseCase;
 
-        public NewProjectComponent(TextBox projectName, TextBox projectDescription, TextBox projectRate, IAddProjectUseCase usecase)
+        public NewProjectComponent(TextBox projectName, TextBox projectDescription, TextBox projectRate, IAddProjectUseCase addProjectUseCase)
         {
             _projectName = projectName;
             _projectDescription = projectDescription;
             _projectRate = projectRate;
-            _addProjectUseCase = usecase;
+            _addProjectUseCase = addProjectUseCase;
         }
 
         public void AddProject()
