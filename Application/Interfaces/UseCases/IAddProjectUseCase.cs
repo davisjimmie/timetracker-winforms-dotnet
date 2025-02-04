@@ -10,6 +10,6 @@ namespace TimeTracker.Application.Interfaces.UseCases
 {
     internal interface IAddProjectUseCase
     {
-        public void Execute(ProjectDTO projectDTO);
+        public void Execute(CreateProjectDTO createProjectDTO);
     }
 }

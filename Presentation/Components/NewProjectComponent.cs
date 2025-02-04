@@ -29,7 +29,7 @@ namespace TimeTracker.Presentation.Components
 
         public void AddProject()
         {
-            MessageBox.Show("ok");
+            MessageBox.Show("Adding new Project");
 
             CreateProjectDTO createProjectDTO = new CreateProjectDTO
             {

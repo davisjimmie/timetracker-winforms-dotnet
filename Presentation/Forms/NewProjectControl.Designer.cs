@@ -85,7 +85,7 @@
             // 
             RateLabel.AutoSize = true;
             RateLabel.Font = new Font("Calibri", 17F, FontStyle.Regular, GraphicsUnit.Point);
-            RateLabel.Location = new Point(356, 9);
+            RateLabel.Location = new Point(344, 9);
             RateLabel.Name = "RateLabel";
             RateLabel.Size = new Size(69, 36);
             RateLabel.TabIndex = 16;
@@ -95,7 +95,7 @@
             // 
             NameTextBox.BackColor = Color.White;
             NameTextBox.Font = new Font("Calibri", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            NameTextBox.Location = new Point(43, 49);
+            NameTextBox.Location = new Point(31, 49);
             NameTextBox.Margin = new Padding(3, 4, 3, 4);
             NameTextBox.Name = "NameTextBox";
             NameTextBox.PlaceholderText = "Project Name";
@@ -107,7 +107,7 @@
             // 
             RateTextBox.BackColor = Color.White;
             RateTextBox.Font = new Font("Calibri", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            RateTextBox.Location = new Point(356, 49);
+            RateTextBox.Location = new Point(344, 49);
             RateTextBox.Margin = new Padding(3, 4, 3, 4);
             RateTextBox.Name = "RateTextBox";
             RateTextBox.PlaceholderText = "Hourly Rate";
@@ -120,7 +120,7 @@
             NameLabel.AutoSize = true;
             NameLabel.BackColor = Color.Transparent;
             NameLabel.Font = new Font("Calibri", 17F, FontStyle.Regular, GraphicsUnit.Point);
-            NameLabel.Location = new Point(43, 9);
+            NameLabel.Location = new Point(31, 9);
             NameLabel.Name = "NameLabel";
             NameLabel.Size = new Size(85, 36);
             NameLabel.TabIndex = 13;
@@ -140,7 +140,7 @@
             // 
             DescriptionTextBox.BackColor = Color.White;
             DescriptionTextBox.Font = new Font("Calibri", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            DescriptionTextBox.Location = new Point(44, 49);
+            DescriptionTextBox.Location = new Point(31, 45);
             DescriptionTextBox.Margin = new Padding(3, 4, 3, 4);
             DescriptionTextBox.Multiline = true;
             DescriptionTextBox.Name = "DescriptionTextBox";
@@ -152,7 +152,7 @@
             // 
             DescriptionLabel.AutoSize = true;
             DescriptionLabel.Font = new Font("Calibri", 17F, FontStyle.Regular, GraphicsUnit.Point);
-            DescriptionLabel.Location = new Point(43, 9);
+            DescriptionLabel.Location = new Point(31, 5);
             DescriptionLabel.Name = "DescriptionLabel";
             DescriptionLabel.Size = new Size(148, 36);
             DescriptionLabel.TabIndex = 14;
@@ -174,7 +174,7 @@
             BackButton.BackColor = Color.RosyBrown;
             BackButton.FlatStyle = FlatStyle.System;
             BackButton.Font = new Font("Calibri", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            BackButton.Location = new Point(43, 4);
+            BackButton.Location = new Point(31, 0);
             BackButton.Margin = new Padding(3, 4, 3, 4);
             BackButton.Name = "BackButton";
             BackButton.Size = new Size(175, 50);
@@ -188,7 +188,7 @@
             AddButton.BackColor = Color.RosyBrown;
             AddButton.FlatStyle = FlatStyle.System;
             AddButton.Font = new Font("Calibri", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            AddButton.Location = new Point(350, 4);
+            AddButton.Location = new Point(338, 0);
             AddButton.Margin = new Padding(3, 4, 3, 4);
             AddButton.Name = "AddButton";
             AddButton.Size = new Size(175, 50);

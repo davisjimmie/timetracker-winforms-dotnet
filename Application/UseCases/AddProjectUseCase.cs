@@ -18,9 +18,9 @@ namespace TimeTracker.Application.UseCases
 
         // Method
         
-        public void Execute(ProjectDTO projectDTO)
+        public void Execute(CreateProjectDTO createProjectDTO)
         {
-            Project project = CreateProjectMapper.MapToEntity(projectDTO);
+            Project project = CreateProjectMapper.MapToEntity(createProjectDTO);
             // save logic below
         }
     }
