@@ -8,14 +8,14 @@ using TimeTracker.Domain.Entities;
 
 namespace TimeTracker.Application.Mappers
 {
-    internal class ProjectMapper
+    internal class CreateProjectMapper
     {
-        public static Project MapToEntity(ProjectDTO projectDTO)
+        public static Project MapToEntity(CreateProjectDTO createProjectDTO)
         {
             return new Project(
-                projectDTO.Name,
-                projectDTO.Description,
-                projectDTO.RatePerHour
+                createProjectDTO.Name,
+                createProjectDTO.Description,
+                createProjectDTO.RatePerHour
             );
         }
     }

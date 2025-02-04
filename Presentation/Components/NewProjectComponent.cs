@@ -31,7 +31,7 @@ namespace TimeTracker.Presentation.Components
         {
             MessageBox.Show("ok");
 
-            ProjectDTO projectDTO = new ProjectDTO
+            CreateProjectDTO createProjectDTO = new CreateProjectDTO
             {
                 Name = _projectName.Text,
                 Description = _projectDescription.Text,
@@ -39,16 +39,18 @@ namespace TimeTracker.Presentation.Components
             };
 
 
-            Project project = new Project(
-                projectDTO.Name,
-                projectDTO.Description,
-                projectDTO.RatePerHour
+            Project projectEntity = new Project
+                (
+                    createProjectDTO.Name, 
+                    createProjectDTO.Description, 
+                    createProjectDTO.RatePerHour
                 );
-            //temp code
-            _projectDescription.Text = string.Empty;
-            _projectDescription.Text = project.ToString();
 
-            _addProjectUseCase.Execute(projectDTO);
+            //temp with domain > entity > project for ToString method override.
+            _projectDescription.Text = string.Empty;
+            _projectDescription.Text = projectEntity.ToString();
+
+            _addProjectUseCase.Execute(createProjectDTO);
         }
     }
 }

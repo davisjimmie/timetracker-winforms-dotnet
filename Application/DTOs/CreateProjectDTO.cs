@@ -7,10 +7,10 @@ using TimeTracker.Domain.Entities;
 
 namespace TimeTracker.Application.DTOs
 {
-    internal class ProjectDTO
+    internal class CreateProjectDTO
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int RatePerHour { get; set; }
+        public required string Name { get; set; }
+        public required string Description { get; set; }
+        public required int RatePerHour { get; set; }
     }
 }

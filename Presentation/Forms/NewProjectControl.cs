@@ -33,7 +33,6 @@ namespace TimeTracker
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Back Button Clicked");
             if (this.Parent is Panel MainPanel)
             {
                 MainPanel.Controls.Clear();
@@ -48,6 +47,11 @@ namespace TimeTracker
         }
 
         private void RateTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

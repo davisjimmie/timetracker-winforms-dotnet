@@ -19,7 +19,6 @@ namespace TimeTracker
 
         private void NewProjectButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("New Project Button Clicked!!!!!!!!!!!!!");
             if (this.Parent is Panel MainPanel)
             {
                 MainPanel.Controls.Clear();
@@ -29,7 +28,7 @@ namespace TimeTracker
 
         private void LoadProjectButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Load Project Button Clicked!!!!!!!!!!!");
+            MessageBox.Show("Load Project Button Clicked");
         }
     }
 }
