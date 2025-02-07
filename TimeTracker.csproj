@@ -9,14 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\Persistence\DbContext\" />
-    <Folder Include="Infrastructure\Persistence\Entities\" />
     <Folder Include="Infrastructure\Persistence\Migrations\" />
-    <Folder Include="Infrastructure\Persistence\Repositories\" />
     <Folder Include="Infrastructure\Persistence\SeedData\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.1" />
   </ItemGroup>
 

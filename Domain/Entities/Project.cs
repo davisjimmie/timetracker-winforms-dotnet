@@ -9,32 +9,44 @@ namespace TimeTracker.Domain.Entities
 {
     internal class Project
     {
-        private readonly List<Task> _tasks;
-
-        public Guid Id { get; private set; }
+        public int ProjectId { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
         public int RatePerHour { get; private set; }
-        public TimeSpan TotalTime { get; private set; }
-        public double TotalCost => RatePerHour * TotalTime.TotalHours;
+        public TimeSpan TotalTime => CalculateTotalTime();
+        public double TotalCost => CalculateTotalCost();
         public Status ProjectStatus { get; private set; }
+        public ICollection<Task> Tasks { get; private set; }
 
-        public Project(string name, string description, int ratePerHour)
+        public Project(int projectId, string name, string description, int ratePerHour, TimeSpan totalTime)
         {
-            Id = Guid.NewGuid();
-            _tasks = new List<Task>();
+            ProjectId = projectId;
             Name = name;
             Description = description;
             RatePerHour = ratePerHour;
-            TotalTime = TimeSpan.Zero;
+            TotalTime = CalculateTotalTime();
             ProjectStatus = Status.Planned;
         }
 
-        public void AddTask(Task task)
+        TimeSpan CalculateTotalTime()
         {
-            _tasks.Add(task);
-            TotalTime += task.LoggedTime;
+            if (Tasks.Count > 0)
+            {
+                return Tasks.Aggregate(TimeSpan.Zero, (sum, task) => sum.Add(task.TotalTime));
+            }
+            else
+            {
+                return TimeSpan.Zero;
+            }
         }
+
+        double CalculateTotalCost()
+        {
+            int rateInSeconds = RatePerHour / 3600;
+            double timeInSeconds = TotalTime.TotalSeconds;
+            return rateInSeconds * timeInSeconds;
+        }
+    }
 
         //temp
         public override string ToString()

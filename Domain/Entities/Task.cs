@@ -9,14 +9,14 @@ namespace TimeTracker.Domain.Entities
 {
     internal class Task
     {
-        public Guid Id { get; private set; }
+        public int Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
         public TimeSpan LoggedTime { get; private set; }
         public TimeSpan EstimatedTime { get; private set; }
         public Status TaskStatus { get; private set; }
 
-        public Task(Guid id, string name, string description, TimeSpan loggedTime, TimeSpan estimatedTime, Status taskStatus)
+        public Task(int id, string name, string description, TimeSpan loggedTime, TimeSpan estimatedTime, Status taskStatus)
         {
             Id = id;
             Name = name;
